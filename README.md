@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  Collins K. Bett
 
  ## Description
- This is a website wherby you can creat quotes, view and rate quotes with upvotes and downvotes
+ This is a website whereby you can creat quotes, view and rate quotes with upvotes and downvotes
 
 ## Development server
 
@@ -33,6 +33,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## License
-This project is licensed under the terms of the MIT license. Copyright (c) 2018 Collins K. Bett
+This project is licensed under the terms of the MIT license. Copyright (c) 2019 Collins K. Bett
 
                       © Collins
