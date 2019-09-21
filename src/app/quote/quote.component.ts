@@ -8,14 +8,17 @@ import { Quote} from'../quote'
 })
 export class QuoteComponent implements OnInit {
   
-  quotes:Quote []=[
-    {id:1, name:'Be so good they can’t ignore you.', description:'Don`t be too good to anybody'},
-    {id:2, name:'The only joy in the world is to begin', description:'Joy,the greatest thing ever'},
-    {id:3, name:'Happiness depends upon ourselves.', description:'Always be happy'},
-    {id:4, name:'Happiness is a state of activity.', description:'You should exercise happiness '}
+  quotes:Quote[] = [
+    new Quote(1,'Be so good they can’t ignore you.','Don`t be too good to anybody'),
+    new Quote(2,'The only joy in the world is to begin','Joy,the greatest thing ever'),
+    new Quote(3,'Happiness depends upon ourselves.','Always be happy'),
+    new Quote(4,'Happiness is a state of activity.','You should exercise happiness ')
   
-
   ];
+
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
 
   constructor() { }
 
