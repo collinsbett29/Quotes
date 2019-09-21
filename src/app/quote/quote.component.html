@@ -1,13 +1,11 @@
-<div>
     <h1>My Favourite Quotes:</h1>
     <hr>
     <ul>
-      <li *ngFor='let quote of quotes;let index = i'>
-        {{quote.name}}
+      <div *ngFor='let quote of quotes;let index = i'>
+        <li>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
         <button (click)='toggleDetails(i)'>Show Details</button>
-        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
-      </li>
+        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completQuote($event,i)'></app-quote-detail>
+      </div>
     </ul>
-  </div>
 
   
