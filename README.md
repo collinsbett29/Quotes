@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  Collins K. Bett
 
  ## Description
- This is a website whereby you can creat quotes, view and rate quotes with upvotes and downvotes
+ This is a website whereby you can create quotes, view and rate quotes with upvotes and downvotes
 
 ## Development server
 
