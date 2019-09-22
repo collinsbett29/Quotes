@@ -7,7 +7,7 @@
         <div class="ui statistic">
           
           <div class="value">
-            {{ votes }}
+            <button style="margin-top: 5px;">{{ votes }}</button>
           </div> 
           <div class="label">
             Votes:
@@ -17,22 +17,18 @@
       
       </div>
       
-      <div class="twelve wide column">
+      <div class="twelve wide column" >
       
         <ul class="ui big horizontal list voters">
-          <li class="item">
+
             <a href (click)="likeVote()">
             <i class="arrow up icon"></i>
-              Upvote
+              <button  type="button" class="btn btn-warning">Upvote</button>
             </a>
-          </li>
-      
-          <li class="item">
+
             <a href (click)="dislikeVote()">
             <i class="arrow down icon"></i>
-              Downvote
+            <button style="margin-left: 10px;" type="button" class="btn btn-warning">Downvote</button>
             </a>
-          </li>
-      
         </ul>
       </div>
