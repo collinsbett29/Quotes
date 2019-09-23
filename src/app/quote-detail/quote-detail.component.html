@@ -1,5 +1,6 @@
 <p>{{quote.description}}</p>
 <p>The quote should be complete in {{quote.completeDate|dateCount}} days</p>
+<p class="details">Said by <em>{{quote.author}}</em> and posted by {{quote.fan}}</p>
 <button (click) = 'quoteDelete(true)' class="btn btn-danger">Delete quote</button>
 
 
@@ -7,11 +8,14 @@
         <div class="ui statistic">
           
           <div class="value">
-            <button style="margin-top: 5px;">{{ votes }}</button>
+
           </div> 
           <div class="label">
             Votes:
           </div>
+
+          <button>{{ votes }}</button>
+          <br>
       
         </div>
       
@@ -19,16 +23,17 @@
       
       <div class="twelve wide column" >
       
-        <ul class="ui big horizontal list voters">
+        <ul class="ui big horizontal list voters" >
 
             <a href (click)="likeVote()">
             <i class="arrow up icon"></i>
-              <button  type="button" class="btn btn-warning btn-small">Upvote</button>
+            <button (click)='upvote(i)' class="btn btn-warning btn-xs">upvotes<i class="fa fa-thumbs-o-up"></i>{{quote.upvotes}}</button>&nbsp;&nbsp;
+  
             </a>
 
             <a href (click)="dislikeVote()">
             <i class="arrow down icon"></i>
-            <button style="margin-left: 10px;" type="button" class="btn btn-warning btn-Xsmall">Downvote</button>
+            <button (click)='downvote(i)' class="btn btn-warning btn-xs">Downvotes<i class="fa fa-thumbs-o-down"></i>{{quote.downvotes}}</button>
             </a>
         </ul>
       </div>
