@@ -27,13 +27,13 @@
 
             <a href (click)="likeVote()">
             <i class="arrow up icon"></i>
-            <button (click)='upvote(i)' class="btn btn-warning btn-xs">upvotes<i class="fa fa-thumbs-o-up"></i>{{quote.upvotes}}</button>&nbsp;&nbsp;
+            <button (click)='vote' class="btn btn-warning btn-xs">upvotes{{quote.votes}}</button>&nbsp;&nbsp;
   
             </a>
 
             <a href (click)="dislikeVote()">
             <i class="arrow down icon"></i>
-            <button (click)='downvote(i)' class="btn btn-warning btn-xs">Downvotes<i class="fa fa-thumbs-o-down"></i>{{quote.downvotes}}</button>
+            <button (click)='vote' class="btn btn-warning btn-xs">Downvotes<i class="fa fa-thumbs-o-down"></i>{{quote.votes}}</button>
             </a>
         </ul>
       </div>
