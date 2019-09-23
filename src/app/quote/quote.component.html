@@ -1,20 +1,21 @@
-<div class="container" style="background-color:#ffc0cb; margin-top: 30px;">
-  <div class="row" style="margin-top: 10px; backface-visibility: visible">
-    <div class="col-6">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
-    <div class="col-6">
-        <h2 style="font-style: italic">My Favourite Quotes:</h2>
-        <hr>
-        <ul>
-          <div *ngFor='let quote of quotes;let i = index'>
-            <li>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
-            <button type="button" class="btn btn-primary" (click)='toggleDetails(i)'>Show Details</button>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+      <div class="container">
+        <div class="row" style="margin-top: 10px; backface-visibility: visible">
+          <div class="col-6">
+              <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
           </div>
-        </ul>
-    
-    </div>
-  </div>
-</div>
+          <div class="col-6">
+              <h2 style="font-style: italic">My Favourite Quotes:</h2>
+              <hr>
+              <ul>
+                <div *ngFor='let quote of quotes;let i = index'>
+                  <li>{{quote.name}} <span style="font-style: italic" >posted on</span>  {{quote.completeDate|date|uppercase}}</li>          
+                  <button (click)='toggleDetails(i)' class="btn btn-info btn-small">Show Details</button>&nbsp;
+                  
+                  <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+                </div>
+              </ul>
+          
+          </div>
+        </div>
+      </div>
   
