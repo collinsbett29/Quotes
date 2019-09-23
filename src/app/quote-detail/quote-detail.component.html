@@ -1,6 +1,6 @@
 <p>{{quote.description}}</p>
-<p>The quote should be complete in {{quote.completeDate|dateCount}} days</p>
-<p class="details">Said by <em>{{quote.author}}</em> and posted by {{quote.fan}}</p>
+<p>  -The quote was posted {{quote.completeDate|dateCount}} day(s) ago</p>
+<p class="details">  -Said by <em>{{quote.author}}</em> and posted by {{quote.fan}}</p>
 <button (click) = 'quoteDelete(true)' class="btn btn-danger">Delete quote</button>
 
 
@@ -11,12 +11,8 @@
 
           </div> 
           <div class="label">
-            Votes:
+            <p>Votes:</p>
           </div>
-
-          <button>{{ votes }}</button>
-          <br>
-      
         </div>
       
       </div>
@@ -27,13 +23,13 @@
 
             <a href (click)="likeVote()">
             <i class="arrow up icon"></i>
-            <button (click)='vote' class="btn btn-warning btn-xs">upvotes{{quote.votes}}</button>&nbsp;&nbsp;
+            <button (click)='vote' class="btn btn-warning btn-xs">upvotes{{quote.votes}}<button>{{ votes }}</button></button>&nbsp;&nbsp;
   
             </a>
 
             <a href (click)="dislikeVote()">
             <i class="arrow down icon"></i>
-            <button (click)='vote' class="btn btn-warning btn-xs">Downvotes<i class="fa fa-thumbs-o-down"></i>{{quote.votes}}</button>
+            <button (click)='vote' class="btn btn-warning btn-xs">Downvotes{{quote.vote}}<button>{{ votes }}</button><i class="fa fa-thumbs-o-down"></i>{{quote.votes}}</button>
             </a>
         </ul>
       </div>

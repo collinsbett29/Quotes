@@ -10,3 +10,10 @@
   .details{
     font-family: 'Jua', sans-serif;
   }
+  em{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  }
+  p{
+    font: 10px;
+  }

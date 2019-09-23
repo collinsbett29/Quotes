@@ -19,6 +19,7 @@ export class QuoteDetailComponent implements OnInit {
 
   @Input () quotes:Quote;
   vote = 0;
+  votess = 0;
 
   constructor() {
     this.votes = 0;
