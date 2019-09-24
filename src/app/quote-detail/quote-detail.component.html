@@ -1,35 +1,4 @@
 <p>{{quote.description}}</p>
 <p>  -The quote was posted {{quote.completeDate|dateCount}} day(s) ago</p>
 <p class="details">  -Said by <em>{{quote.author}}</em> and posted by {{quote.fan}}</p>
-<button (click) = 'quoteDelete(true)' class="btn btn-danger">Delete quote</button>
-
-
-<div class="four wide column center aligned votes">
-        <div class="ui statistic">
-          
-          <div class="value">
-
-          </div> 
-          <div class="label">
-            <p>Votes:</p>
-          </div>
-        </div>
-      
-      </div>
-      
-      <div class="twelve wide column" >
-      
-        <ul class="ui big horizontal list voters" >
-
-            <a href (click)="likeVote()">
-            <i class="arrow up icon"></i>
-            <button (click)='vote' class="btn btn-warning btn-xs">upvotes{{quote.votes}}<button>{{ votes }}</button></button>&nbsp;&nbsp;
-  
-            </a>
-
-            <a href (click)="dislikeVote()">
-            <i class="arrow down icon"></i>
-            <button (click)='vote' class="btn btn-warning btn-xs">Downvotes{{quote.vote}}<button>{{ votes }}</button><i class="fa fa-thumbs-o-down"></i>{{quote.votes}}</button>
-            </a>
-        </ul>
-      </div>
+<button (click)='quoteDelete(true)' class="delete">Delete Quote</button>
